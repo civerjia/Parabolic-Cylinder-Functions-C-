@@ -17,4 +17,8 @@
 %     case 7:dpv;
 %     case 8:pvlx;
 %     case 9:dpvlx;
+%     case 10:pw;
+%     case 11:dpw;
+%     case 12:pwlx;
+%     case 13:dpwlx;
 % val : return value size = (n,1)
