@@ -11,8 +11,8 @@
 %     case 1:dpu;
 %     case 2:pulx;
 %     case 3:dpulx;
-%     case 4:pd;  % pu(-a - 0.5, x)
-%     case 5:dpd; % dpu(-a - 0.5, x)
+%     case 4:pd;  % pu(-a - 0.5, x)   D
+%     case 5:dpd; % dpu(-a - 0.5, x)  dD_dx
 %     case 6:pv;
 %     case 7:dpv;
 %     case 8:pvlx;
