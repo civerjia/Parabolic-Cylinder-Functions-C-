@@ -8,9 +8,22 @@ This project is a faster version of MATLAB code original from E. Cojocaru. Parab
 - Intel compiler, OPENMP， AVX2 or AVX512 are utilized to speed up the calculation.
 
 ## What's inside the box
-- `pcf_mex(a,x,'pu)` Compute parabolic cylinder function U(a,x), s.t. abs(a)<5 and abs(x)<5
-- 
+- `pcf_mex(a,x,'pu')` Compute parabolic cylinder function U(a,x), s.t. abs(a)<5 and abs(x)<5
+- `pcf_mex(a,x,'dpu')` Compute derivative of parabolic cylinder function U(a,x), s.t. abs(a)<5 and abs(x)<5
+- `pcf_mex(a,x,'pulx')` Compute parabolic cylinder function U(a,x) for large argument x (|x| >> |a| and |a| moderate)
+- `pcf_mex(a,x,'dpulx')` Compute parabolic derivative of cylinder function U(a,x) for large argument x (|x| >> |a| and |a| moderate)
+- `pcf_mex(a,x,'D')` Compute parabolic cylinder function D(a,x) = U(-a-0.5,x), s.t. |a|<5 and |x|<5 (used in bortfeld function)
+- `pcf_mex(a,x,'dD')` Compute parabolic derivative of cylinder function D(a,x) = U(-a-0.5,x), s.t. |a|<5 and |x|<5 (used in bortfeld function)
+- `pcf_mex(a,x,'pv')` Compute parabolic cylinder function V(a,x), s.t. abs(a)<5 and abs(x)<5
+- `pcf_mex(a,x,'dpv')` Compute derivative of parabolic cylinder function V(a,x), s.t. abs(a)<5 and abs(x)<5
+- `pcf_mex(a,x,'pvlx')` Compute parabolic cylinder function V(a,x) for large argument x (|x| >> |a| and |a| moderate)
+- `pcf_mex(a,x,'dpvlx')` Compute parabolic derivative of cylinder function V(a,x) for large argument x (|x| >> |a| and |a| moderate)
+- `pcf_mex(a,x,'pw')` Compute parabolic cylinder function W(a,x), s.t. abs(a)<5 and abs(x)<5
+- `pcf_mex(a,x,'dpw')` Compute derivative of parabolic cylinder function W(a,x), s.t. abs(a)<5 and abs(x)<5
+- `pcf_mex(a,x,'pwlx')` Compute parabolic cylinder function W(a,x) for large argument x (|x| >> |a| and |a| moderate)
+- `pcf_mex(a,x,'dpwlx')` Compute parabolic derivative of cylinder function W(a,x) for large argument x (|x| >> |a| and |a| moderate)
 
+## Speed benchmark
 I tested it with simple benchmark : pcf_mex(-1,linspace(4,5,1e6),'pwlx'), unit is seconds
 
 % 0.3994 intel compiler 2021 + openmp + avx2
