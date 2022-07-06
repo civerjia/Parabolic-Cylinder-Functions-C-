@@ -2,11 +2,14 @@
 
 This project is a faster version of MATLAB code original from E. Cojocaru. Parabolic Cylinder Functions (https://www.mathworks.com/matlabcentral/fileexchange/22620-parabolic-cylinder-functions)
 
-The API is similar to original functions, such as `val = pwlx(a,x);` -> `val = pcf_mex(a,x,'pwlx');`
+## Features: 
+- The API is similar to original functions, such as `val = pwlx(a,x);` -> `val = pcf_mex(a,x,'pwlx');`
+- The MATLAB toolbox only support scalar inputs, pcf_mex now support 1D array of size (1,n) or (n,1), return value will have size(n,1). 
+- Intel compiler, OPENMP， AVX2 or AVX512 are utilized to speed up the calculation.
 
-The MATLAB toolbox only support scalar inputs, pcf_mex now support 1D array of size (1,n) or (n,1), return value will have size(n,1). 
-
-Intel compiler, OPENMP， AVX2 or AVX512 are utilized to speed up the calculation.
+## What's inside the box
+- `pcf_mex(a,x,'pu)` Compute parabolic cylinder function U(a,x), s.t. abs(a)<5 and abs(x)<5
+- 
 
 I tested it with simple benchmark : pcf_mex(-1,linspace(4,5,1e6),'pwlx'), unit is seconds
 
