@@ -45,3 +45,6 @@ I tested it with simple benchmark : pcf_mex(-1,linspace(4,5,1e6),'pwlx'), unit i
 % 32.521651 original
 
 The first one is compiled with Visual Studio + Intel OneAPI, intel compiler 2021 is much more faster.
+
+## "omp.h" not found at M1 Mac
+refer to my answer: https://www.mathworks.com/matlabcentral/answers/1761950-m1-mac-compile-mex-file-with-openmp
