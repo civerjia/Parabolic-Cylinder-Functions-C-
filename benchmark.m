@@ -8,11 +8,12 @@ val2 = pcf_mex(a,x,'pwlx');
 t(i) = toc;
 end
 mean(t)
+% 1.8453 Apple M1 pro + openmp (Matlab2022a Rosseta2)
 % 0.3994 intel compiler 2021 + openmp + avx2
 % 1.0733 vs + openmp + avx2
 % 1.0858 vs + openmp
 % 9.7933 vs
-%%
+%% need Parabolic Cylinder Functions toolbox
 tic;
 val1 = zeros(1e6,1);
 parfor i = 1:1e6
