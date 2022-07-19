@@ -8,6 +8,7 @@ This project is a faster version of MATLAB code original from E. Cojocaru. Parab
 - The MATLAB toolbox only support scalar inputs, pcf_mex now support 1D array of size (1,n) or (n,1), return value will have size(n,1). 
 - Intel compiler, OPENMP， AVX2 or AVX512 are utilized to speed up the calculation.
 - Add two useful functions for bortfeld function
+- *Apple Silicon supported*
 
 ## What's inside the box
 - `pcf_mex(a,x,'pu')` Compute parabolic cylinder function U(a,x), s.t. abs(a)<5 and abs(x)<5
@@ -27,6 +28,8 @@ This project is a faster version of MATLAB code original from E. Cojocaru. Parab
 
 ## Speed benchmark
 I tested it with simple benchmark : pcf_mex(-1,linspace(4,5,1e6),'pwlx'), unit is seconds
+
+% 1.8453 Apple M1 pro + openmp (Matlab2022a Rosseta2)
 
 % 0.3994 intel compiler 2021 + openmp + avx2
 
